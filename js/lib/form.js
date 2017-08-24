@@ -9,8 +9,8 @@ angular.module('formExample', ['am.multiselect'])
     ];
     $scope.user = {'baseFare': 0, 'errorMsg': false, 'successMsg': false};
     $scope.requestJet = function(user) {
-
-        console.log(user);
+        $scope.user.errorMsg = '';
+        $scope.user.successMsg = '';
         
         if (typeof user.pickUp === 'undefined') {
             $scope.user.errorMsg = 'Pick-Up is missing';
@@ -20,6 +20,10 @@ angular.module('formExample', ['am.multiselect'])
             return false;
         } else if (typeof user.date === 'undefined') {
             $scope.user.errorMsg = 'Departure date is missing';
+            return false;
+        } else if (Date.parse(user.date) < Date.parse(new Date())) {
+            // selected date is in the past
+            $scope.user.errorMsg = 'Departure date is not available';
             return false;
         } else {
             $scope.user.errorMsg = false;
