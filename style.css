@@ -1,0 +1,511 @@
+/*
+	Theme Name: HTML5 Blank
+	Theme URI: http://html5blank.com
+	Description: HTML5 Blank WordPress Theme
+	Version: 1.4.3
+	Author: Todd Motto (@toddmotto)
+	Author URI: http://toddmotto.com
+	Tags: Blank, HTML5, CSS3
+
+	License: MIT
+	License URI: http://opensource.org/licenses/mit-license.php
+*/
+
+/*------------------------------------*\
+    MAIN
+\*------------------------------------*/
+
+/* global box-sizing */
+*,
+*:after,
+*:before {
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	-webkit-font-smoothing:antialiased;
+	font-smoothing:antialiased;
+	text-rendering:optimizeLegibility;
+}
+/* html element 62.5% font-size for REM use */
+html {
+	font-size:62.5%;
+}
+body {
+	font:300 11px/1.4 'Helvetica Neue', Helvetica, Arial, sans-serif;
+	color: #white;
+	background-image: url('img/bg.png');
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin-top: 20px;
+}
+/* clear */
+.clear:before,
+.clear:after {
+    content:' ';
+    display:table;
+}
+
+.clear:after {
+    clear:both;
+}
+.clear {
+    *zoom:1;
+}
+
+main {
+    margin: auto;
+    max-width: 400px;
+}
+
+main input {
+    line-height: normal;
+    border: 0;
+    height: 30px;
+    width: 360px;
+    font-size: x-large;
+}
+
+main input:focus {
+    border: 0;
+}
+
+main label {
+    font-weight: normal;
+}
+
+main .input-lg {
+    padding: 10px 0px;
+}
+
+main .form-dropdown {
+    display: inline-block;
+    width: 250px;
+    margin: -20px;
+}
+
+.btn-group>.btn {
+    border: none;
+    background-color: transparent;
+}
+
+.btn-group.open, .dropdown-toggle {
+    -webkit-box-shadow: none;
+    box-shadow: none;
+}
+
+main .form-datepicker {
+    display: inline-block;
+    width: 120px;
+}
+
+main .form-datepicker input {
+    width: 120px;
+    background-color: transparent;
+}
+img {
+	max-width:100%;
+	vertical-align:bottom;
+}
+input:focus {
+	outline:0;
+	border:1px solid #04A4CC;
+}
+
+.errorMsg {
+	border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: red;
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+.successMsg {
+	border: 1px solid #ddd;
+    margin-bottom: 10px;
+    background-color: blue;
+    color: white;
+    padding: 5px;
+    padding-left: 20px;
+    border-radius: 5px;
+}
+
+/*------------------------------------*\
+    STRUCTURE
+\*------------------------------------*/
+
+/* wrapper */
+.wrapper {
+	max-width:1280px;
+	width:100%;
+	margin:0 auto;
+	position:relative;
+}
+/* header */
+.header {
+
+}
+/* logo */
+.logo {
+	padding: 20px 0px 0px 20px;
+}
+.logo-img {
+
+}
+/* nav */
+.nav {
+
+}
+
+.nav ul {
+    right: 20px;
+    top: 40px;
+    position: absolute;
+
+}
+
+.nav ul li {
+    display: inline-block;
+	text-align: right;
+    width: 100px;
+    list-style-type: none;
+    color: white;
+}
+
+.nav ul li a {
+	color: white;
+	text-decoration:none;
+}
+.nav ul li a:hover {
+	color: white;
+}
+.nav ul li a:focus {
+	outline:0;
+}
+.nav ul li a:hover,
+.nav ul li a:active {
+	outline:0;
+}
+
+/* sidebar */
+.sidebar {
+}
+/* footer */
+.footer {
+	background: #f7f9fb;
+    border-top: 1px solid #ddd;
+    padding-top: 20px;
+}
+
+.footer ul {
+    list-style-type: none;
+    float: left;
+}
+
+.footer ul li {
+    width: 80px;
+    font-style: bold;
+    display: inline-block;
+}
+
+.footer ul li a {
+    color: black;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+
+.grab-form {
+	background-image: url(img/form-bg.png);
+	padding: 20px;
+    border: 1px #ddd solid;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px #888888;
+    margin-bottom: 20px;
+}
+
+.top-img {
+	width: 80%;
+}
+
+.top-img-cl {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.related-content {
+	display: inline-flex;
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+.related-content div {
+	width: 200px;
+	overflow: hidden;
+}
+
+.copyright {
+	float: right;
+	padding-right: 20px;
+}
+
+div.desc {
+    padding: 15px;
+    text-align: center;
+}
+
+.responsive {
+    padding: 0 6px;
+    float: left;
+    width: 33%;
+}
+
+#sprite-dollar {
+    width: 26px;
+    background: url('img/sprite.png') 0 0;
+    height: 50px;
+    margin: auto;
+}
+
+#sprite-plane {
+    width: 38px;
+    background: url('img/sprite.png') -26px 0;
+    height: 50px;
+    margin: auto;
+}
+
+#sprite-like {
+    width: 43px;
+    background: url('img/sprite.png') -64px 0;
+    height: 50px;
+    margin: auto;
+}
+.clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.request-btn {
+	background-color: #33c066;
+    border-radius: 3px;
+    height: 40px;
+    color: white;
+    width: 100%;
+}
+
+.request-btn-txt {
+	display: inline-block;
+    padding: 0px 20px;
+    font-size: medium;
+    float: left;
+}
+
+.request-btn-amt {
+	display: inline-block;
+    float: right;
+    padding: 0px 20px;
+    font-weight: bold;
+    font-size: xx-large;
+    margin: -12px;
+}
+/*------------------------------------*\
+    PAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+    IMAGES
+\*------------------------------------*/
+
+
+
+/*------------------------------------*\
+	TYPOGRAPHY
+\*------------------------------------*/
+
+@font-face {
+	font-family:'Font-Name';
+	src:url('fonts/font-name.eot');
+	src:url('fonts/font-name.eot?#iefix') format('embedded-opentype'),
+		url('fonts/font-name.woff') format('woff'),
+		url('fonts/font-name.ttf') format('truetype'),
+		url('fonts/font-name.svg#font-name') format('svg');
+    font-weight:normal;
+    font-style:normal;
+}
+
+/*------------------------------------*\
+    RESPONSIVE
+\*------------------------------------*/
+
+@media only screen and (max-width: 700px){
+    .responsive {
+        width: 49.99999%;
+        margin: 6px 0;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .logo {
+        width: 150px;
+        padding: 0px;
+    }
+}
+
+@media only screen and (max-width: 500px){
+    .responsive {
+        width: 100%;
+    }
+}
+
+/*------------------------------------*\
+    MISC
+\*------------------------------------*/
+
+::selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-webkit-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+::-moz-selection {
+	background:#04A4CC;
+	color:#FFF;
+	text-shadow:none;
+}
+
+/*------------------------------------*\
+    WORDPRESS CORE
+\*------------------------------------*/
+
+.alignnone {
+	margin:5px 20px 20px 0;
+}
+.aligncenter,
+div.aligncenter {
+	display:block;
+	margin:5px auto 5px auto;
+}
+.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.alignright {
+	float:right;
+	margin:5px 0 20px 20px;
+}
+a img.alignnone {
+	margin:5px 20px 20px 0;
+}
+a img.alignleft {
+	float:left;
+	margin:5px 20px 20px 0;
+}
+a img.aligncenter {
+	display:block;
+	margin-left:auto;
+	margin-right:auto;
+}
+.wp-caption {
+	background:#FFF;
+	border:1px solid #F0F0F0;
+	max-width:96%;
+	padding:5px 3px 10px;
+	text-align:center;
+}
+.wp-caption.alignnone {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignleft {
+	margin:5px 20px 20px 0;
+}
+.wp-caption.alignright {
+	margin:5px 0 20px 20px;
+}
+.wp-caption img {
+	border:0 none;
+	height:auto;
+	margin:0;
+	max-width:98.5%;
+	padding:0;
+	width:auto;
+}
+.wp-caption .wp-caption-text,
+.gallery-caption {
+	font-size:11px;
+	line-height:17px;
+	margin:0;
+	padding:0 4px 5px;
+}
+.sticky {
+
+}
+.bypostauthor {
+
+}
+
+
+/*------------------------------------*\
+    PRINT
+\*------------------------------------*/
+
+@media print {
+	* {
+		background:transparent !important;
+		color:#000 !important;
+		box-shadow:none !important;
+		text-shadow:none !important;
+	}
+	a,
+	a:visited {
+		text-decoration:underline;
+	}
+	a[href]:after {
+		content:" (" attr(href) ")";
+	}
+	abbr[title]:after {
+		content:" (" attr(title) ")";
+	}
+	.ir a:after,
+	a[href^="javascript:"]:after,
+	a[href^="#"]:after {
+		content:"";
+	}
+	pre,blockquote {
+		border:1px solid #999;
+		page-break-inside:avoid;
+	}
+	thead {
+		display:table-header-group;
+	}
+	tr,img {
+		page-break-inside:avoid;
+	}
+	img {
+		max-width:100% !important;
+	}
+	@page {
+		margin:0.5cm;
+	}
+	p,
+	h2,
+	h3 {
+		orphans:3;
+		widows:3;
+	}
+	h2,
+	h3 {
+		page-break-after:avoid;
+	}
+}
