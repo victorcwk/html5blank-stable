@@ -7,7 +7,7 @@ angular.module('formExample', ['am.multiselect'])
         {id: 3, service: 'massage (+$50)', price: 50},
         {id: 4, service: 'jacuzzi (+$180)', price: 180},
     ];
-    $scope.user = {'baseFare': 0, 'errorMsg': false, 'successMsg': false};
+    $scope.user = {'baseFare': 0, 'additionalFare': 0, 'errorMsg': false, 'successMsg': false};
     $scope.requestJet = function(user) {
         $scope.user.errorMsg = '';
         $scope.user.successMsg = '';
