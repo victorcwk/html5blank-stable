@@ -353,6 +353,12 @@ div.desc {
         width: 150px;
         padding: 0px;
     }
+    .nav ul {
+	    top: 10px;
+	}
+	.nav ul li {
+	    width: 70px;
+	}
 }
 
 @media only screen and (max-width: 500px){
